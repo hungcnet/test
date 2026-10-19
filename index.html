@@ -15,6 +15,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<script>try{var s=localStorage.getItem('theme');if(s==='light'||s==='dark')document.documentElement.setAttribute('data-theme',s)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -69,6 +70,10 @@ h2.t{font:500 clamp(2rem,4.5vw,3rem)/1.1 var(--display);margin:0 0 .75rem}
 .info dd{margin:0}
 .btn{display:inline-block;margin-top:2.5rem;background:var(--accent);color:var(--on-accent);font:500 1rem var(--body);padding:.9rem 2rem;border-radius:999px;text-decoration:none}
 .btn:hover{filter:brightness(1.06)}
+header{flex-wrap:wrap;gap:.5rem 1rem}
+nav{display:flex;align-items:center;flex-wrap:wrap}
+#theme{font:400 .9rem var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:.35rem 1rem;margin-left:1.5rem;cursor:pointer}
+#theme:hover{background:var(--panel)}
 .lnk{display:inline-block;margin-top:.5rem;text-underline-offset:5px}
 .btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.5rem}
 .btns .btn{margin-top:0}
@@ -81,7 +86,7 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px sol
 <div class="wrap">
   <header>
     <span class="logo">Thủy Triều</span>
-    <nav><a href="#thuc-don">Thực đơn thử vị</a><a href="#dat-ban">Đặt bàn</a></nav>
+    <nav><a href="#thuc-don">Thực đơn thử vị</a><a href="#dat-ban">Đặt bàn</a><button type="button" id="theme">Chế độ tối</button></nav>
   </header>
 
   <main>
@@ -164,6 +169,19 @@ function show(i){
 }
 btns.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i)})});
 show(2);card.className='card';
+(function(){
+  var root=document.documentElement,b=document.getElementById('theme'),mq=window.matchMedia('(prefers-color-scheme: dark)');
+  function cur(){var t=root.getAttribute('data-theme');return t||(mq.matches?'dark':'light')}
+  function label(){b.textContent=cur()==='dark'?'Chế độ sáng':'Chế độ tối'}
+  label();
+  b.addEventListener('click',function(){
+    var n=cur()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n)}catch(e){}
+    label();
+  });
+  if(mq.addEventListener)mq.addEventListener('change',label);
+})();
 </script>
 </body>
 </html>
