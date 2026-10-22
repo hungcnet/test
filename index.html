@@ -1,187 +1,909 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="h-full bg-slate-950 text-slate-100">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Thủy Triều – Nhà hàng hải sản</title>
-<meta name="description" content="Nhà hàng hải sản Thủy Triều tại Sảnh T11, Vincom MegaMall Times City, Hà Nội. Cua hoàng đế sống, tôm hùm, hàu, lẩu hải sản. Mở cửa 09:00 – 22:00, hotline 1800 1900.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="vi_VN">
-<meta property="og:site_name" content="Thủy Triều">
-<meta property="og:title" content="Thủy Triều – Nhà hàng hải sản, cua hoàng đế sống">
-<meta property="og:description" content="Sảnh T11, Vincom MegaMall Times City, Hà Nội. Mở cửa 09:00 – 22:00 mỗi ngày. Đặt bàn: 1800 1900.">
-<meta property="og:url" content="https://test-two-orcin-13.vercel.app/">
-<meta property="og:image" content="https://test-two-orcin-13.vercel.app/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<script>try{var s=localStorage.getItem('theme');if(s==='light'||s==='dark')document.documentElement.setAttribute('data-theme',s)}catch(e){}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#E6E9E6; --panel:#D6DCD8; --ink:#0C3440; --muted:#476069; --accent:#9ED3C7; --on-accent:#0C3440; --line:#0C3440;
-  --display:"Cormorant Garamond",Georgia,serif;
-  --body:"Be Vietnam Pro",system-ui,sans-serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0C3440; --panel:#13424F; --ink:#E6E9E6; --muted:#A9C0C4; --accent:#9ED3C7; --line:#E6E9E6; color-scheme:dark}
-}
-:root[data-theme="dark"]{--bg:#0C3440; --panel:#13424F; --ink:#E6E9E6; --muted:#A9C0C4; --accent:#9ED3C7; --line:#E6E9E6; color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:300 1.05rem/1.75 var(--body)}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.wrap{max-width:72rem;margin:0 auto;padding:0 1.75rem}
-header{display:flex;justify-content:space-between;align-items:baseline;padding:2rem 0;font:400 .95rem var(--body)}
-header .logo{font:600 1.7rem var(--display);letter-spacing:.04em}
-header a{text-decoration:none;margin-left:2rem}
-header a:hover{text-decoration:underline;text-underline-offset:6px}
-.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:start;padding:3rem 0 6rem}
-h1{font:500 clamp(2.8rem,6.5vw,5.6rem)/1.02 var(--display);letter-spacing:-.01em;margin:0 0 2rem}
-.lede{max-width:30rem;color:var(--muted);margin:0}
-.catch h2{font:500 1.5rem var(--display);margin:0 0 1rem}
-.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
-.tabs button{font:400 .95rem var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:.45rem 1.1rem;cursor:pointer}
-.tabs button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:500}
-.card{background:var(--panel);padding:2rem;border-radius:.25rem 2.5rem .25rem 2.5rem;min-height:15rem}
-.card h3{font:600 2.2rem/1.1 var(--display);margin:0 0 .25rem}
-.card .src{color:var(--muted);margin:0 0 1.25rem;font-size:.95rem}
-.card p{margin:0 0 1.25rem}
-.card .price{font:500 1.1rem var(--body);margin:0}
-.card.swap{animation:in .35s ease-out}
-@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.card.swap{animation:none}}
-section{padding:4rem 0;border-top:1px solid var(--line)}
-h2.t{font:500 clamp(2rem,4.5vw,3rem)/1.1 var(--display);margin:0 0 .75rem}
-.sub{color:var(--muted);max-width:32rem;margin:0 0 2.5rem}
-.courses{list-style:none;margin:0;padding:0;max-width:44rem}
-.courses li{display:grid;grid-template-columns:1fr;padding:1.1rem 0;border-bottom:1px solid var(--muted)}
-.courses .n{font:600 1.45rem var(--display)}
-.courses .d{color:var(--muted);font-size:.98rem}
-.price-line{font:500 1.15rem var(--body);margin-top:1.75rem}
-.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2.5rem}
-.info h3{font:600 1.5rem var(--display);margin:0 0 .5rem}
-.info p,.info dl{margin:0}
-.info dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.25rem}
-.info dd{margin:0}
-.btn{display:inline-block;margin-top:2.5rem;background:var(--accent);color:var(--on-accent);font:500 1rem var(--body);padding:.9rem 2rem;border-radius:999px;text-decoration:none}
-.btn:hover{filter:brightness(1.06)}
-header{flex-wrap:wrap;gap:.5rem 1rem}
-nav{display:flex;align-items:center;flex-wrap:wrap}
-#theme{font:400 .9rem var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:.35rem 1rem;margin-left:1.5rem;cursor:pointer}
-#theme:hover{background:var(--panel)}
-.lnk{display:inline-block;margin-top:.5rem;text-underline-offset:5px}
-.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.5rem}
-.btns .btn{margin-top:0}
-.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
-footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-@media (max-width:820px){.hero{grid-template-columns:1fr;gap:3rem}header a{margin-left:1.25rem}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hướng Dẫn Kết Nối Claude Code với MCP IMAP Server</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            claude: {
+              orange: '#DA7756',
+              dark: '#1F1E1B',
+              accent: '#E68F71',
+              card: '#282623'
+            },
+            mcp: {
+              purple: '#8B5CF6',
+              indigo: '#6366F1',
+              cyan: '#06B6D4'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+    
+    .gradient-border {
+      position: relative;
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, rgba(218, 119, 86, 0.3), rgba(139, 92, 246, 0.3));
+      padding: 1px;
+    }
+
+    .pulse-glow {
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+    
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(218, 119, 86, 0.2); }
+      50% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.4); }
+    }
+
+    .data-flow-line {
+      stroke-dasharray: 8;
+      animation: dash 2s linear infinite;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -16;
+      }
+    }
+  </style>
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <span class="logo">Thủy Triều</span>
-    <nav><a href="#thuc-don">Thực đơn thử vị</a><a href="#dat-ban">Đặt bàn</a><button type="button" id="theme">Chế độ tối</button></nav>
-  </header>
+<body class="h-full font-sans antialiased bg-slate-950 text-slate-100 flex flex-col min-h-screen">
 
-  <main>
-    <div class="hero">
-      <div>
-        <h1>Hải sản sống, chọn từ bể và chế biến ngay trước mặt bạn.</h1>
-        <p class="lede">Món chủ lực là cua hoàng đế, giữ sống trong bể và hấp nguyên con khi bạn gọi. Tôm, hàu và cá được nhận mỗi sáng; món nào hết trong ngày thì được gạch khỏi thực đơn.</p>
-      </div>
-
-      <div class="catch">
-        <h2>Từ biển về hôm nay</h2>
-        <div class="tabs" role="group" aria-label="Chọn hải sản">
-          <button type="button" aria-pressed="true" data-i="0">Hàu</button>
-          <button type="button" aria-pressed="false" data-i="1">Tôm hùm</button>
-          <button type="button" aria-pressed="false" data-i="2">Cua hoàng đế</button>
-          <button type="button" aria-pressed="false" data-i="3">Cá mú đỏ</button>
-          <button type="button" aria-pressed="false" data-i="4">Lẩu hải sản</button>
+  <!-- Top Navigation Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-claude-orange to-mcp-purple flex items-center justify-center shadow-lg shadow-claude-orange/20">
+          <i class="fa-solid fa-network-wired text-white text-lg"></i>
         </div>
-        <div class="card" id="card" aria-live="polite"></div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight bg-gradient-to-r from-orange-200 via-white to-purple-200 bg-clip-text text-transparent">
+            Claude Code x MCP IMAP
+          </h1>
+          <p class="text-xs text-slate-400">Hướng Dẫn Kết Nối & Tương Tác Email Trực Tiếp</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center space-x-3 text-xs">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+          MCP Standard v1.0
+        </span>
+        <a href="#simulator" class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-claude-orange/20 hover:bg-claude-orange/30 text-claude-accent border border-claude-orange/40 transition">
+          <i class="fa-solid fa-terminal mr-1.5"></i> Thử nghiệm Simulator
+        </a>
       </div>
     </div>
+  </header>
 
-    <section id="thuc-don">
-      <h2 class="t">Thực đơn thử vị sáu món</h2>
-      <p class="sub">Đầu bếp quyết định món theo mẻ hải sản của ngày. Thực đơn đổi theo mùa và được in vào chiều cùng ngày.</p>
-      <ol class="courses">
-        <li><span class="n">Hàu sống sốt chanh dây gừng</span><span class="d">Hàu Vân Đồn, dùng lạnh</span></li>
-        <li><span class="n">Gỏi sứa, tôm sú và xoài xanh</span><span class="d">Dầu mè rang, lạc rang giã dập</span></li>
-        <li><span class="n">Súp cua hoàng đế trứng cút</span><span class="d">Nấu từ gạch cua, lọc kỹ</span></li>
-        <li><span class="n">Tôm hùm Bình Ba nướng bơ tỏi</span><span class="d">Ăn cùng cơm chiên hải sản</span></li>
-        <li><span class="n">Cá mú đỏ hấp xì dầu</span><span class="d">Hành, gừng, dầu nóng rưới tại bàn</span></li>
-        <li><span class="n">Chè hạt sen nước dừa non</span><span class="d">Dùng lạnh để kết thúc bữa</span></li>
-      </ol>
-      <p class="price-line">1.890.000 ₫ mỗi người, từ 2 người trở lên</p>
-    </section>
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-12">
 
-    <section id="dat-ban">
-      <h2 class="t">Đặt bàn</h2>
-      <div class="info">
-        <div>
-          <h3>Giờ phục vụ</h3>
-          <dl>
-            <dt>Hằng ngày</dt><dd>09:00 – 22:00</dd>
-            
-          </dl>
+    <!-- Hero / Intro Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-mono text-purple-300">
+          <i class="fa-solid fa-cube text-mcp-purple"></i>
+          <span>Model Context Protocol Integration</span>
         </div>
-        <div>
-          <h3>Địa chỉ</h3>
-          <p>Sảnh T11, Vincom MegaMall Times City, quận Hai Bà Trưng, Hà Nội.</p>
-          <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Vincom+Mega+Mall+Times+City+Hai+Ba+Trung+Ha+Noi" target="_blank" rel="noopener">Xem trên Google Maps</a>
-        </div>
-        <div>
-          <h3>Phòng riêng</h3>
-          <p>Hai phòng riêng cho 8 đến 14 khách. Vui lòng đặt trước 48 giờ.</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          Kết nối <span class="text-claude-orange">Claude Code</span> trực tiếp tới Hòm Thư Email qua <span class="text-mcp-purple">MCP IMAP</span>
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          <strong>Model Context Protocol (MCP)</strong> cho phép Claude Code CLI đọc, tìm kiếm, tóm tắt và phân loại email từ bất kỳ máy chủ mail hỗ trợ chuẩn <strong>IMAP</strong> (Gmail, Outlook, iCloud, Custom Mail Server) một cách an toàn và tự động.
+        </p>
+
+        <!-- Quick Specs Badges -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+          <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+            <div class="text-slate-400 text-xs font-medium">Phương thức</div>
+            <div class="text-sm font-semibold text-slate-200 mt-1"><i class="fa-solid fa-lock text-emerald-400 mr-1"></i> SSL / TLS (993)</div>
+          </div>
+          <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+            <div class="text-slate-400 text-xs font-medium">Giao thức MCP</div>
+            <div class="text-sm font-semibold text-slate-200 mt-1"><i class="fa-solid fa-code text-blue-400 mr-1"></i> Stdio / JSON-RPC</div>
+          </div>
+          <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 col-span-2 sm:col-span-1">
+            <div class="text-slate-400 text-xs font-medium">Quyền hạn</div>
+            <div class="text-sm font-semibold text-slate-200 mt-1"><i class="fa-solid fa-shield-halved text-amber-400 mr-1"></i> Read-Only / Safe</div>
+          </div>
         </div>
       </div>
-      <div class="btns">
-        <a class="btn" href="tel:18001900">Gọi 1800 1900</a>
-        <a class="btn alt" href="https://www.google.com/maps/dir/?api=1&destination=Vincom+Mega+Mall+Times+City+Hai+Ba+Trung+Ha+Noi" target="_blank" rel="noopener">Chỉ đường đến nhà hàng</a>
+
+      <!-- Quick Architecture Visual Box -->
+      <div class="lg:col-span-5">
+        <div class="gradient-border">
+          <div class="bg-slate-900 p-6 rounded-[11px] space-y-4">
+            <h3 class="text-sm font-semibold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+              <span>Sơ đồ tổng quan</span>
+              <span class="text-xs font-mono text-slate-500">Architecture</span>
+            </h3>
+
+            <div class="space-y-3 font-mono text-xs">
+              <!-- Node 1 -->
+              <div class="p-3 bg-slate-950 rounded-lg border border-claude-orange/30 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <i class="fa-solid fa-terminal text-claude-orange text-lg"></i>
+                  <div>
+                    <div class="font-bold text-slate-200">Claude Code CLI</div>
+                    <div class="text-slate-400 text-[11px]">AI Assistant Client</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-claude-orange/10 text-claude-orange text-[10px]">Client</span>
+              </div>
+
+              <!-- Connection Arrow 1 -->
+              <div class="flex justify-center text-slate-500 my-1">
+                <i class="fa-solid fa-arrow-down-up-lock text-mcp-purple animate-bounce"></i>
+                <span class="text-[10px] ml-2 font-mono text-slate-400">STDIO (JSON-RPC)</span>
+              </div>
+
+              <!-- Node 2 -->
+              <div class="p-3 bg-slate-950 rounded-lg border border-mcp-purple/30 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <i class="fa-solid fa-server text-mcp-purple text-lg"></i>
+                  <div>
+                    <div class="font-bold text-slate-200">MCP IMAP Server</div>
+                    <div class="text-slate-400 text-[11px]">Node.js / Python Adapter</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-mcp-purple/10 text-mcp-purple text-[10px]">MCP Tool</span>
+              </div>
+
+              <!-- Connection Arrow 2 -->
+              <div class="flex justify-center text-slate-500 my-1">
+                <i class="fa-solid fa-arrow-down-long text-cyan-400"></i>
+                <span class="text-[10px] ml-2 font-mono text-slate-400">IMAP Protocol (Port 993)</span>
+              </div>
+
+              <!-- Node 3 -->
+              <div class="p-3 bg-slate-950 rounded-lg border border-cyan-500/30 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <i class="fa-solid fa-envelope text-cyan-400 text-lg"></i>
+                  <div>
+                    <div class="font-bold text-slate-200">IMAP Mail Provider</div>
+                    <div class="text-slate-400 text-[11px]">Gmail, Outlook, Custom Server</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 text-[10px]">Remote Server</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Interactive Architecture Diagram & Deep Dive -->
+    <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h3 class="text-xl font-bold text-white flex items-center">
+            <i class="fa-solid fa-diagram-project text-mcp-purple mr-2.5"></i>
+            Luồng Dữ Liệu Chi Tiết (Interactive Flow)
+          </h3>
+          <p class="text-sm text-slate-400 mt-1">Nhấp vào từng nút bên dưới để xem cách dữ liệu được truyền qua lại khi bạn gửi yêu cầu xử lý email</p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button id="btnStepPrev" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-300 disabled:opacity-50">
+            <i class="fa-solid fa-chevron-left mr-1"></i> Trước
+          </button>
+          <button id="btnStepNext" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-300">
+            Tiếp theo <i class="fa-solid fa-chevron-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Flowchart Visual Container -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+        
+        <!-- Step 1 Card -->
+        <div id="flowNode1" class="flow-node bg-slate-950 border border-slate-800 hover:border-claude-orange p-4 rounded-xl transition cursor-pointer relative">
+          <div class="text-xs font-mono text-claude-orange mb-1 font-semibold">BƯỚC 1</div>
+          <div class="text-sm font-bold text-slate-200">User Prompt</div>
+          <p class="text-xs text-slate-400 mt-2">Người dùng yêu cầu: "Tóm tắt 5 email chưa đọc gần nhất trong Inbox"</p>
+          <div class="mt-3 text-[11px] font-mono text-slate-500 bg-slate-900 p-2 rounded">
+            Claude Code CLI
+          </div>
+        </div>
+
+        <!-- Step 2 Card -->
+        <div id="flowNode2" class="flow-node bg-slate-950 border border-slate-800 hover:border-mcp-purple p-4 rounded-xl transition cursor-pointer relative">
+          <div class="text-xs font-mono text-mcp-purple mb-1 font-semibold">BƯỚC 2</div>
+          <div class="text-sm font-bold text-slate-200">Tool Request</div>
+          <p class="text-xs text-slate-400 mt-2">Claude gọi tool `imap_search` thông qua JSON-RPC qua stdio</p>
+          <div class="mt-3 text-[11px] font-mono text-slate-500 bg-slate-900 p-2 rounded">
+            MCP Protocol Standard
+          </div>
+        </div>
+
+        <!-- Step 3 Card -->
+        <div id="flowNode3" class="flow-node bg-slate-950 border border-slate-800 hover:border-cyan-400 p-4 rounded-xl transition cursor-pointer relative">
+          <div class="text-xs font-mono text-cyan-400 mb-1 font-semibold">BƯỚC 3</div>
+          <div class="text-sm font-bold text-slate-200">IMAP Command</div>
+          <p class="text-xs text-slate-400 mt-2">MCP IMAP Server kết nối TLS, gửi lệnh IMAP `SEARCH UNSEEN` tới Mail Server</p>
+          <div class="mt-3 text-[11px] font-mono text-slate-500 bg-slate-900 p-2 rounded">
+            TLS Port 993 Connection
+          </div>
+        </div>
+
+        <!-- Step 4 Card -->
+        <div id="flowNode4" class="flow-node bg-slate-950 border border-slate-800 hover:border-emerald-400 p-4 rounded-xl transition cursor-pointer relative">
+          <div class="text-xs font-mono text-emerald-400 mb-1 font-semibold">BƯỚC 4</div>
+          <div class="text-sm font-bold text-slate-200">Parse & Answer</div>
+          <p class="text-xs text-slate-400 mt-2">Trích xuất nội dung RFC822, trả về văn bản đã phân tích cho Claude tóm tắt</p>
+          <div class="mt-3 text-[11px] font-mono text-slate-500 bg-slate-900 p-2 rounded">
+            Format Output for Claude
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Detail Box for Selected Flow Step -->
+      <div id="flowDetailBox" class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-xs font-mono space-y-2">
+        <div class="text-slate-400 font-bold uppercase tracking-wider flex items-center justify-between">
+          <span id="flowDetailTitle" class="text-claude-orange">BƯỚC 1: NHẬP CÂU LỆNH TỰ NHIÊN</span>
+          <span class="text-[10px] text-slate-500">JSON Protocol / Internal State</span>
+        </div>
+        <p id="flowDetailDesc" class="text-slate-300 font-sans text-sm">
+          Người dùng gõ lệnh bằng ngôn ngữ tự nhiên trong giao diện dòng lệnh Claude Code. Claude nhận diện intent liên quan tới email và tìm kiếm các công cụ (tools) do MCP IMAP Server cung cấp.
+        </p>
+        <div id="flowDetailCode" class="bg-slate-900 p-3 rounded text-slate-300 overflow-x-auto">
+          $ claude "Kiểm tra xem hôm nay có email nào từ đối tác về hợp đồng không?"
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Step-by-Step Installation & Configuration Guide -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-800 pb-4">
+        <h3 class="text-2xl font-bold text-white flex items-center">
+          <i class="fa-solid fa-list-check text-claude-orange mr-3"></i>
+          Các Bước Cài Đặt Chi Tiết
+        </h3>
+        <p class="text-sm text-slate-400 mt-1">Hướng dẫn từng bước cấu hình MCP IMAP Server vào Claude Code CLI trên máy của bạn</p>
+      </div>
+
+      <!-- Tab Navigation for Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+        <button onclick="switchStepTab(1)" id="tabBtn1" class="step-tab-btn text-left p-3.5 rounded-xl border border-claude-orange/40 bg-slate-900 text-white transition font-medium text-sm flex items-center space-x-3">
+          <span class="w-6 h-6 rounded-full bg-claude-orange/20 text-claude-orange text-xs flex items-center justify-center font-mono font-bold">1</span>
+          <span>Chuẩn bị Mail Passwords</span>
+        </button>
+        <button onclick="switchStepTab(2)" id="tabBtn2" class="step-tab-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 hover:text-slate-200 transition font-medium text-sm flex items-center space-x-3">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 text-xs flex items-center justify-center font-mono font-bold">2</span>
+          <span>Cài MCP IMAP Package</span>
+        </button>
+        <button onclick="switchStepTab(3)" id="tabBtn3" class="step-tab-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 hover:text-slate-200 transition font-medium text-sm flex items-center space-x-3">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 text-xs flex items-center justify-center font-mono font-bold">3</span>
+          <span>Cấu hình Claude Code</span>
+        </button>
+        <button onclick="switchStepTab(4)" id="tabBtn4" class="step-tab-btn text-left p-3.5 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 hover:text-slate-200 transition font-medium text-sm flex items-center space-x-3">
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 text-xs flex items-center justify-center font-mono font-bold">4</span>
+          <span>Kiểm tra Kết nối</span>
+        </button>
+      </div>
+
+      <!-- Step Tab Contents -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        
+        <!-- Tab 1: Email Prep -->
+        <div id="stepContent1" class="step-content space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">Bước 1: Chuẩn bị App Password (Ứng Dụng Mật Khẩu)</h4>
+            <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs rounded-full"><i class="fa-solid fa-shield-cat mr-1"></i> Bảo Mật Yêu Cầu</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Hầu hết các dịch vụ email hiện đại (Gmail, Outlook, Yahoo) không cho phép đăng nhập trực tiếp bằng mật khẩu tài khoản chính qua IMAP mà yêu cầu <strong>App Password (Mật khẩu ứng dụng)</strong> hoặc kích hoạt 2FA.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+              <div class="font-semibold text-sm text-red-400 flex items-center">
+                <i class="fa-brands fa-google mr-2 text-base"></i> Gmail / Google Workspace
+              </div>
+              <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+                <li>Bật <strong>Xác thực 2 bước (2-Step Verification)</strong> trong Google Account.</li>
+                <li>Truy cập: <code class="text-purple-300 font-mono">myaccount.google.com/apppasswords</code></li>
+                <li>Tạo App Password mới (Ví dụ chọn app tên "Claude MCP").</li>
+                <li>Lưu chuỗi 16 ký tự (Ví dụ: <code class="text-emerald-400 font-mono">abcd efgh ijkl mnop</code>).</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+              <div class="font-semibold text-sm text-blue-400 flex items-center">
+                <i class="fa-brands fa-microsoft mr-2 text-base"></i> Outlook / Office 365
+              </div>
+              <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+                <li>Truy cập <code class="text-purple-300 font-mono">account.live.com/proofs/manage/additional</code></li>
+                <li>Cuộn xuống phần <strong>App passwords</strong>.</li>
+                <li>Chọn <strong>Create a new app password</strong>.</li>
+                <li>Sử dụng mật khẩu vừa tạo làm giá trị cho <code class="text-emerald-400 font-mono">IMAP_PASSWORD</code>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Package Install -->
+        <div id="stepContent2" class="step-content hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">Bước 2: Cài Đặt hoặc Sử Dụng MCP IMAP Server Package</h4>
+            <span class="px-2.5 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs rounded-full"><i class="fa-brands fa-npm mr-1"></i> Node.js / npx</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Có nhiều MCP IMAP package sẵn có trong cộng đồng open-source (như <code class="text-purple-300 font-mono">@mcp-servers/imap</code> hoặc <code class="text-purple-300 font-mono">imap-mcp-server</code>). Bạn có thể chạy trực tiếp bằng <code class="text-emerald-400 font-mono">npx</code> mà không cần cài đặt cố định.
+          </p>
+
+          <div class="space-y-3">
+            <div class="text-xs font-mono text-slate-400">Cách 1: Chạy trực tiếp thông qua npx (Khuyên dùng)</div>
+            <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 flex items-center justify-between font-mono text-xs">
+              <span class="text-emerald-400">npx -y @gongaza/mcp-imap-server</span>
+              <button onclick="copyText('npx -y @gongaza/mcp-imap-server')" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded text-[11px] transition">
+                <i class="fa-regular fa-copy mr-1"></i> Copy
+              </button>
+            </div>
+
+            <div class="text-xs font-mono text-slate-400">Cách 2: Cài toàn cục (Global CLI)</div>
+            <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 flex items-center justify-between font-mono text-xs">
+              <span class="text-emerald-400">npm install -g @gongaza/mcp-imap-server</span>
+              <button onclick="copyText('npm install -g @gongaza/mcp-imap-server')" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded text-[11px] transition">
+                <i class="fa-regular fa-copy mr-1"></i> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Claude Code Config -->
+        <div id="stepContent3" class="step-content hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">Bước 3: Cấu hình File `claude.json` / MCP Config</h4>
+            <span class="px-2.5 py-1 bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs rounded-full"><i class="fa-solid fa-file-code mr-1"></i> Config JSON</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Claude Code CLI lưu trữ danh sách các MCP Server trong file cấu hình người dùng. Thêm khối <code class="text-claude-orange font-mono">mcpServers</code> vào file cấu hình của Claude.
+          </p>
+
+          <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 text-xs font-mono space-y-2">
+            <div class="text-slate-400">Vị trí file cấu hình Claude Code:</div>
+            <ul class="text-slate-300 space-y-1 list-disc list-inside text-[11px]">
+              <li><strong>macOS/Linux:</strong> <code class="text-amber-300">~/.claude.json</code> hoặc <code class="text-amber-300">~/.config/claude/claude.json</code></li>
+              <li><strong>Windows:</strong> <code class="text-amber-300">%APPDATA%\Claude\claude.json</code></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tab 4: Verify -->
+        <div id="stepContent4" class="step-content hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">Bước 4: Khởi Động Claude Code & Kiểm Tra</h4>
+            <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs rounded-full"><i class="fa-solid fa-vial mr-1"></i> Test Run</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Mở Terminal, khởi chạy Claude Code CLI và kiểm tra xem danh sách tools của IMAP đã sẵn sàng chưa bằng câu lệnh trợ giúp hoặc kiểm tra mcp tools.
+          </p>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3 font-mono text-xs">
+            <div class="text-slate-400">// Khởi động Claude Code trong dự án của bạn:</div>
+            <div class="text-emerald-400 font-bold">$ claude</div>
+
+            <div class="text-slate-400 mt-2">// Trong phiên làm việc với Claude, thử gõ:</div>
+            <div class="text-claude-accent font-bold">/mcp</div>
+            <p class="text-slate-400 text-[11px] font-sans">-> Bạn sẽ thấy MCP Server <code class="text-purple-300 font-mono">imap-mail</code> ở trạng thái <strong>Connected</strong> cùng danh sách các tool như <code class="text-cyan-300 font-mono">imap_search</code>, <code class="text-cyan-300 font-mono">imap_fetch</code>, <code class="text-cyan-300 font-mono">imap_list_mailboxes</code>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive JSON Config Generator Tool -->
+    <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <h3 class="text-xl font-bold text-white flex items-center">
+            <i class="fa-solid fa-sliders text-cyan-400 mr-2.5"></i>
+            Trình Tạo Cấu Hình MCP Config (`claude.json`)
+          </h3>
+          <p class="text-sm text-slate-400 mt-1">Điền thông tin mail server của bạn để tự động sinh file JSON chuẩn</p>
+        </div>
+        
+        <!-- Preset Selector Buttons -->
+        <div class="flex items-center space-x-2">
+          <span class="text-xs text-slate-400">Mẫu nhanh:</span>
+          <button onclick="applyPreset('gmail')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs text-red-300 border border-red-500/20 transition">
+            Gmail
+          </button>
+          <button onclick="applyPreset('outlook')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs text-blue-300 border border-blue-500/20 transition">
+            Outlook
+          </button>
+          <button onclick="applyPreset('custom')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 border border-slate-700 transition">
+            Tự định nghĩa
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Form Inputs -->
+        <div class="lg:col-span-5 space-y-4">
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">IMAP Host</label>
+            <input type="text" id="cfgHost" value="imap.gmail.com" oninput="updateConfigOutput()" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs font-mono text-slate-200 focus:outline-none focus:border-claude-orange">
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Cổng (Port)</label>
+              <input type="number" id="cfgPort" value="993" oninput="updateConfigOutput()" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs font-mono text-slate-200 focus:outline-none focus:border-claude-orange">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Sử dụng TLS/SSL</label>
+              <select id="cfgTls" onchange="updateConfigOutput()" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs font-mono text-slate-200 focus:outline-none focus:border-claude-orange">
+                <option value="true">true (Bắt buộc)</option>
+                <option value="false">false</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Email / Username</label>
+            <input type="text" id="cfgUser" value="ban.email@gmail.com" oninput="updateConfigOutput()" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs font-mono text-slate-200 focus:outline-none focus:border-claude-orange">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">App Password / Mật Khẩu</label>
+            <input type="password" id="cfgPass" value="abcd1234efgh5678" oninput="updateConfigOutput()" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs font-mono text-slate-200 focus:outline-none focus:border-claude-orange">
+          </div>
+
+          <div class="p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg text-[11px] text-amber-300 leading-relaxed">
+            <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+            Lưu ý: Mật khẩu hiển thị ở đây chỉ để tạo cấu hình mẫu trên trình duyệt của bạn. Hãy đảm bảo giữ bảo mật file <code class="font-mono">claude.json</code> thực tế.
+          </div>
+        </div>
+
+        <!-- JSON Output Preview -->
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-slate-400">File: claude.json</span>
+            <button onclick="copyGeneratedConfig()" class="px-3 py-1 bg-claude-orange/20 hover:bg-claude-orange/30 text-claude-accent border border-claude-orange/30 rounded text-xs transition flex items-center">
+              <i class="fa-regular fa-copy mr-1.5"></i> Sao chép JSON
+            </button>
+          </div>
+
+          <pre id="jsonOutput" class="flex-grow bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs font-mono text-emerald-400 overflow-x-auto leading-relaxed max-h-[350px]">
+{
+  "mcpServers": {
+    "imap-mail": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@gongaza/mcp-imap-server"
+      ],
+      "env": {
+        "IMAP_HOST": "imap.gmail.com",
+        "IMAP_PORT": "993",
+        "IMAP_TLS": "true",
+        "IMAP_USER": "ban.email@gmail.com",
+        "IMAP_PASSWORD": "abcd1234efgh5678"
+      }
+    }
+  }
+}
+          </pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Live Simulator: Testing Claude Prompts with MCP Tools -->
+    <section id="simulator" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+      <div class="border-b border-slate-800 pb-4">
+        <h3 class="text-xl font-bold text-white flex items-center">
+          <i class="fa-solid fa-terminal text-emerald-400 mr-2.5"></i>
+          Mô Phỏng Trực Quan Phiên Làm Việc Claude Code (Live Terminal Simulator)
+        </h3>
+        <p class="text-sm text-slate-400 mt-1">Thử nghiệm các câu lệnh mẫu để xem Claude xử lý câu hỏi tự nhiên thành gọi MCP Tool như thế nào</p>
+      </div>
+
+      <!-- Quick Preset Prompt Chips -->
+      <div class="flex flex-wrap gap-2 items-center">
+        <span class="text-xs text-slate-400">Chọn câu hỏi mẫu:</span>
+        <button onclick="runSimPrompt('unread')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 transition">
+          📩 Tóm tắt email chưa đọc
+        </button>
+        <button onclick="runSimPrompt('invoice')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 transition">
+          🧾 Tìm hóa đơn tháng này
+        </button>
+        <button onclick="runSimPrompt('folders')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 border border-slate-700 transition">
+          📁 Liệt kê các thư mục Mailbox
+        </button>
+      </div>
+
+      <!-- Simulated Terminal Window -->
+      <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-2xl font-mono text-xs">
+        <!-- Terminal Header -->
+        <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+            <span class="text-slate-400 text-xs ml-2">claude-code-cli — bash</span>
+          </div>
+          <span class="text-[10px] text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">MCP Connected</span>
+        </div>
+
+        <!-- Terminal Body -->
+        <div id="terminalLog" class="p-4 space-y-3 min-h-[280px] max-h-[420px] overflow-y-auto leading-relaxed">
+          <div class="text-slate-500">Welcome to Claude Code CLI v1.2.0 (with MCP IMAP Server)</div>
+          <div class="text-slate-500">Type a prompt or choose a sample prompt above to simulate interaction...</div>
+        </div>
+
+        <!-- Terminal Input Bar -->
+        <div class="border-t border-slate-800 p-3 bg-slate-900/50 flex items-center space-x-2">
+          <span class="text-claude-orange font-bold pl-2">&gt;</span>
+          <input type="text" id="simInput" placeholder="Gõ câu lệnh bằng tiếng Việt (Ví dụ: Tìm email từ đối tác...)" class="flex-grow bg-transparent text-slate-100 placeholder-slate-600 focus:outline-none text-xs">
+          <button onclick="executeSimInput()" class="px-3 py-1.5 bg-claude-orange hover:bg-claude-accent text-slate-950 font-bold rounded text-xs transition">
+            Gửi <i class="fa-solid fa-paper-plane ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Best Practices Section -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <h4 class="font-bold text-white text-base">Bảo Mật Quyền Riêng Tư</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          MCP IMAP Server chạy cục bộ (Local Stdio) trên máy tính của bạn. Mật khẩu email không bao giờ được gửi tới máy chủ bên thứ ba.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg">
+          <i class="fa-solid fa-key"></i>
+        </div>
+        <h4 class="font-bold text-white text-base">Không Dùng Mật Khẩu Chính</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Luôn luôn tạo App Password riêng cho Claude Code. Nếu nghi ngờ rò rỉ, bạn có thể thu hồi mật khẩu ứng dụng này bất cứ lúc nào mà không ảnh hưởng tới tài khoản gốc.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg">
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <h4 class="font-bold text-white text-base">Chế Đồ Đọc (Read-Only)</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Hầu hết các lệnh MCP IMAP chỉ thực hiện tra cứu, đọc và tóm tắt. Tránh cấp quyền gửi/xóa mail nếu không thực sự cần thiết để bảo vệ inbox.
+        </p>
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>Thủy Triều, Sảnh T11, Vincom MegaMall Times City, Hai Bà Trưng, Hà Nội. Hotline 1800 1900.</footer>
-</div>
-<script>
-var items=[
- {n:"Hàu Vân Đồn",s:"Quảng Ninh",d:"Dùng sống với sốt chanh dây gừng, hoặc nướng mỡ hành. Thịt béo, vị biển rõ.",p:"20.000 ₫ mỗi con"},
- {n:"Tôm hùm Bình Ba",s:"Khánh Hòa",d:"Nướng bơ tỏi hoặc hấp bia gừng. Chọn con từ bể, nhân viên cân tại bàn trước khi chế biến.",p:"1.000.000 ₫ mỗi kg"},
- {n:"Cua hoàng đế",s:"Nhập theo chuyến, giữ sống trong bể",d:"Hấp nguyên con, ăn cùng giấm gừng. Gạch được dùng nấu súp trong thực đơn thử vị.",p:"2.000.000 ₫ mỗi kg"},
- {n:"Cá mú đỏ",s:"Phú Quốc",d:"Hấp xì dầu hành gừng hoặc nấu lẩu chua cay. Thịt chắc, ít xương dăm.",p:"800.000 ₫ mỗi kg"},
- {n:"Lẩu hải sản",s:"Hải sản chọn trong ngày",d:"Nước lẩu nấu tại bàn, ăn cùng hải sản tươi chọn từ bể.",p:"500.000 ₫ mỗi nồi"}
-];
-var card=document.getElementById('card'),btns=document.querySelectorAll('.tabs button');
-function show(i){
-  var it=items[i];
-  card.className='card swap';
-  card.innerHTML='<h3>'+it.n+'</h3><p class="src">'+it.s+'</p><p>'+it.d+'</p><p class="price">'+it.p+'</p>';
-  btns.forEach(function(b,j){b.setAttribute('aria-pressed',j===i)});
-}
-btns.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i)})});
-show(2);card.className='card';
-(function(){
-  var root=document.documentElement,b=document.getElementById('theme'),mq=window.matchMedia('(prefers-color-scheme: dark)');
-  function cur(){var t=root.getAttribute('data-theme');return t||(mq.matches?'dark':'light')}
-  function label(){b.textContent=cur()==='dark'?'Chế độ sáng':'Chế độ tối'}
-  label();
-  b.addEventListener('click',function(){
-    var n=cur()==='dark'?'light':'dark';
-    root.setAttribute('data-theme',n);
-    try{localStorage.setItem('theme',n)}catch(e){}
-    label();
-  });
-  if(mq.addEventListener)mq.addEventListener('change',label);
-})();
-</script>
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-6 mt-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <span>Claude Code MCP IMAP Interactive Integration Guide</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="hover:text-slate-400 transition cursor-pointer" onclick="alert('Model Context Protocol (MCP) là tiêu chuẩn mở giúp kết nối LLMs với các nguồn dữ liệu ngoài.')">
+          <i class="fa-solid fa-circle-info mr-1"></i> Về MCP
+        </span>
+        <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener" class="hover:text-slate-400 transition">
+          <i class="fa-solid fa-external-link mr-1"></i> MCP Spec Docs
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Step Tab Switching Logic
+    function switchStepTab(stepNum) {
+      // Hide all contents
+      document.querySelectorAll('.step-content').forEach(el => el.classList.add('hidden'));
+      
+      // Reset tab buttons
+      document.querySelectorAll('.step-tab-btn').forEach(btn => {
+        btn.classList.remove('border-claude-orange/40', 'bg-slate-900', 'text-white');
+        btn.classList.add('border-slate-800', 'bg-slate-950', 'text-slate-400');
+      });
+
+      // Show selected content & active button
+      document.getElementById(`stepContent${stepNum}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tabBtn${stepNum}`);
+      activeBtn.classList.remove('border-slate-800', 'bg-slate-950', 'text-slate-400');
+      activeBtn.classList.add('border-claude-orange/40', 'bg-slate-900', 'text-white');
+    }
+
+    // Interactive Flow Node Steps
+    const flowSteps = [
+      {
+        id: 1,
+        title: "BƯỚC 1: NHẬP CÂU LỆNH TỰ NHIÊN (PROMPT)",
+        desc: "Người dùng gõ lệnh bằng ngôn ngữ tự nhiên trong giao diện dòng lệnh Claude Code. Claude phân tích và nhận diện nhu cầu tương tác với hòm thư.",
+        code: '$ claude "Tóm tắt 5 email chưa đọc gần nhất trong hòm thư Inbox của tôi"',
+        color: "text-claude-orange"
+      },
+      {
+        id: 2,
+        title: "BƯỚC 2: CHUYỂN ĐỔI THÀNH GỌI CÔNG CỤ (MCP TOOL CALL)",
+        desc: "Claude Code đối chiếu yêu cầu với danh sách MCP tools hiện có và đóng gói yêu cầu thành gói tin JSON-RPC chuẩn MCP qua luồng Stdio.",
+        code: '{\n  "jsonrpc": "2.0",\n  "method": "tools/call",\n  "params": {\n    "name": "imap_search",\n    "arguments": { "mailbox": "INBOX", "criteria": ["UNSEEN"], "limit": 5 }\n  }\n}',
+        color: "text-mcp-purple"
+      },
+      {
+        id: 3,
+        title: "BƯỚC 3: MCP SERVER TRUY VẤN MÁY CHỦ IMAP (TLS/SSL)",
+        desc: "MCP IMAP Server nhận request, mở kết nối socket mã hóa TLS tới máy chủ Mail (VD: imap.gmail.com:993) và gửi lệnh IMAP protocol gốc.",
+        code: 'A1 SEARCH UNSEEN\n* SEARCH 1024 1025 1026 1027 1028\nA2 FETCH 1024:1028 (BODY[HEADER.FIELDS (FROM SUBJECT DATE)])',
+        color: "text-cyan-400"
+      },
+      {
+        id: 4,
+        title: "BƯỚC 4: XỬ LÝ DỮ LIỆU & PHẢN HỒI CHO CLAUDE",
+        desc: "MCP IMAP Server bóc tách nội dung mail (Headers, Plaintext) và trả kết quả về cho Claude Code để AI tổng hợp thông tin thành văn bản trả lời mạch lạc.",
+        code: 'Claude: "Bạn có 5 email chưa đọc:\n1. [Hóa đơn] Công ty ABC - 1.200.000 VNĐ\n2. [Dự án] Cập nhật tiến độ Sprint 4..."',
+        color: "text-emerald-400"
+      }
+    ];
+
+    let currentFlowIdx = 0;
+
+    function highlightFlowNode(idx) {
+      currentFlowIdx = idx;
+      
+      // Update UI for Node Cards
+      document.querySelectorAll('.flow-node').forEach((node, i) => {
+        if (i === idx) {
+          node.classList.add('ring-2', 'ring-claude-orange', 'bg-slate-900');
+          node.classList.remove('bg-slate-950');
+        } else {
+          node.classList.remove('ring-2', 'ring-claude-orange', 'bg-slate-900');
+          node.classList.add('bg-slate-950');
+        }
+      });
+
+      // Update Detail Box
+      const step = flowSteps[idx];
+      const titleEl = document.getElementById('flowDetailTitle');
+      titleEl.innerText = step.title;
+      titleEl.className = `font-bold ${step.color}`;
+      document.getElementById('flowDetailDesc').innerText = step.desc;
+      document.getElementById('flowDetailCode').innerText = step.code;
+
+      // Disable/Enable Nav buttons
+      document.getElementById('btnStepPrev').disabled = (idx === 0);
+      document.getElementById('btnStepNext').disabled = (idx === flowSteps.length - 1);
+    }
+
+    document.getElementById('btnStepPrev').addEventListener('click', () => {
+      if (currentFlowIdx > 0) highlightFlowNode(currentFlowIdx - 1);
+    });
+
+    document.getElementById('btnStepNext').addEventListener('click', () => {
+      if (currentFlowIdx < flowSteps.length - 1) highlightFlowNode(currentFlowIdx + 1);
+    });
+
+    document.querySelectorAll('.flow-node').forEach((node, idx) => {
+      node.addEventListener('click', () => highlightFlowNode(idx));
+    });
+
+    // Initialize Flow Step 0
+    highlightFlowNode(0);
+
+    // Config Generator Logic
+    function applyPreset(provider) {
+      if (provider === 'gmail') {
+        document.getElementById('cfgHost').value = 'imap.gmail.com';
+        document.getElementById('cfgPort').value = '993';
+        document.getElementById('cfgTls').value = 'true';
+        document.getElementById('cfgUser').value = 'user@gmail.com';
+      } else if (provider === 'outlook') {
+        document.getElementById('cfgHost').value = 'outlook.office365.com';
+        document.getElementById('cfgPort').value = '993';
+        document.getElementById('cfgTls').value = 'true';
+        document.getElementById('cfgUser').value = 'user@outlook.com';
+      } else {
+        document.getElementById('cfgHost').value = 'mail.domaincuaban.com';
+        document.getElementById('cfgPort').value = '993';
+        document.getElementById('cfgTls').value = 'true';
+        document.getElementById('cfgUser').value = 'admin@domaincuaban.com';
+      }
+      updateConfigOutput();
+    }
+
+    function updateConfigOutput() {
+      const host = document.getElementById('cfgHost').value || 'imap.example.com';
+      const port = document.getElementById('cfgPort').value || '993';
+      const tls = document.getElementById('cfgTls').value;
+      const user = document.getElementById('cfgUser').value || 'user@example.com';
+      const pass = document.getElementById('cfgPass').value || 'your-password';
+
+      const jsonConfig = {
+        "mcpServers": {
+          "imap-mail": {
+            "command": "npx",
+            "args": [
+              "-y",
+              "@gongaza/mcp-imap-server"
+            ],
+            "env": {
+              "IMAP_HOST": host,
+              "IMAP_PORT": port,
+              "IMAP_TLS": tls,
+              "IMAP_USER": user,
+              "IMAP_PASSWORD": pass
+            }
+          }
+        }
+      };
+
+      document.getElementById('jsonOutput').innerText = JSON.stringify(jsonConfig, null, 2);
+    }
+
+    function copyGeneratedConfig() {
+      const text = document.getElementById('jsonOutput').innerText;
+      copyText(text, "Đã sao chép cấu hình JSON!");
+    }
+
+    function copyText(text, message = "Đã sao chép vào bộ nhớ tạm!") {
+      // Fallback copy implementation
+      const tempInput = document.createElement("textarea");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      
+      // Toast notice
+      const toast = document.createElement("div");
+      toast.className = "fixed bottom-5 right-5 bg-emerald-500 text-slate-950 font-bold px-4 py-2 rounded-lg shadow-xl text-xs z-50 flex items-center space-x-2";
+      toast.innerHTML = `<i class="fa-solid fa-check-circle"></i> <span>${message}</span>`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2500);
+    }
+
+    // Terminal Simulator Logic
+    const terminalLog = document.getElementById('terminalLog');
+    const simInput = document.getElementById('simInput');
+
+    const promptResponses = {
+      'unread': {
+        prompt: "Tóm tắt các email chưa đọc trong hòm thư của tôi",
+        toolCall: 'imap_search({ mailbox: "INBOX", criteria: ["UNSEEN"], limit: 3 })',
+        mcpResult: '[Found 2 Unread Emails]\n1. From: dev-alerts@github.com - "Build succeeded for repo/api-service"\n2. From: hr@company.com - "Thông báo lịch nghỉ lễ Quốc Khánh"',
+        claudeReply: "Bạn có **2 email chưa đọc** trong Inbox:\n\n1. 🛠️ **GitHub Dev Alert**: Build thành công cho repository `repo/api-service`.\n2. 📢 **HR Company**: Thông báo chính thức về lịch nghỉ lễ Quốc Khánh tới toàn bộ nhân viên."
+      },
+      'invoice': {
+        prompt: "Tìm hóa đơn hoặc chứng từ tháng này",
+        toolCall: 'imap_search({ mailbox: "INBOX", criteria: ["SUBJECT", "Hóa đơn"], limit: 5 })',
+        mcpResult: '[Found 1 Matching Email]\n1. From: billing@cloud-provider.com - "Hóa đơn GTGT dịch vụ Cloud tháng 10/2026 - 1,500,000 VND"',
+        claudeReply: "Tôi đã tìm thấy **1 hóa đơn** trong tháng này:\n\n• **Nhà cung cấp**: Cloud Provider\n• **Nội dung**: Hóa đơn GTGT dịch vụ Cloud tháng 10/2026\n• **Số tiền**: 1.500.000 VNĐ"
+      },
+      'folders': {
+        prompt: "Liệt kê danh sách các thư mục Mailbox",
+        toolCall: 'imap_list_mailboxes()',
+        mcpResult: '["INBOX", "Sent", "Drafts", "Junk", "Trash", "Archive", "Projects/2026"]',
+        claudeReply: "Danh sách các thư mục (Mailboxes) khả dụng trên máy chủ Mail của bạn:\n\n- 📥 `INBOX` (Hòm thư đến)\n- 📤 `Sent` (Đã gửi)\n- 📝 `Drafts` (Thư nháp)\n- 📂 `Projects/2026` (Thư mục dự án)"
+      }
+    };
+
+    function runSimPrompt(key) {
+      if (promptResponses[key]) {
+        simulateTurn(promptResponses[key].prompt, promptResponses[key]);
+      }
+    }
+
+    function executeSimInput() {
+      const val = simInput.value.trim();
+      if (!val) return;
+
+      let matched = promptResponses['unread'];
+      if (val.toLowerCase().includes('hóa đơn') || val.toLowerCase().includes('invoice')) {
+        matched = promptResponses['invoice'];
+      } else if (val.toLowerCase().includes('thư mục') || val.toLowerCase().includes('folder')) {
+        matched = promptResponses['folders'];
+      }
+
+      simulateTurn(val, matched);
+      simInput.value = '';
+    }
+
+    function simulateTurn(userPromptText, responseData) {
+      // Append User Prompt
+      const userLine = document.createElement('div');
+      userLine.className = 'flex items-start space-x-2 text-slate-200 mt-3 pt-3 border-t border-slate-900';
+      userLine.innerHTML = `<span class="text-claude-orange font-bold">&gt;</span> <span>${escapeHtml(userPromptText)}</span>`;
+      terminalLog.appendChild(userLine);
+
+      // Tool Call Log
+      setTimeout(() => {
+        const toolLine = document.createElement('div');
+        toolLine.className = 'bg-slate-900/80 border border-mcp-purple/30 p-2.5 rounded text-[11px] text-purple-300 font-mono space-y-1';
+        toolLine.innerHTML = `
+          <div class="flex items-center justify-between text-slate-400 text-[10px]">
+            <span><i class="fa-solid fa-gear text-mcp-purple mr-1"></i> Calling MCP Tool</span>
+            <span>mcp-imap-server</span>
+          </div>
+          <div class="text-amber-300 font-bold">${responseData.toolCall}</div>
+        `;
+        terminalLog.appendChild(toolLine);
+        terminalLog.scrollTop = terminalLog.scrollHeight;
+      }, 500);
+
+      // MCP Result Log
+      setTimeout(() => {
+        const resLine = document.createElement('div');
+        resLine.className = 'bg-slate-900/40 border border-slate-800 p-2 rounded text-[11px] text-emerald-400 font-mono whitespace-pre-line';
+        resLine.innerHTML = `<span class="text-slate-500">// Result from IMAP Server:</span>\n${responseData.mcpResult}`;
+        terminalLog.appendChild(resLine);
+        terminalLog.scrollTop = terminalLog.scrollHeight;
+      }, 1200);
+
+      // Claude Final Answer
+      setTimeout(() => {
+        const claudeLine = document.createElement('div');
+        claudeLine.className = 'text-slate-200 bg-claude-dark/60 p-3 rounded-lg border border-claude-orange/20 space-y-1';
+        claudeLine.innerHTML = `
+          <div class="text-[10px] text-claude-accent font-bold uppercase tracking-wider mb-1 flex items-center">
+            <i class="fa-solid fa-sparkles mr-1"></i> Claude Code Response
+          </div>
+          <div class="text-xs whitespace-pre-line font-sans">${responseData.claudeReply}</div>
+        `;
+        terminalLog.appendChild(claudeLine);
+        terminalLog.scrollTop = terminalLog.scrollHeight;
+      }, 2000);
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    // Allow Enter key in terminal input
+    simInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') executeSimInput();
+    });
+  </script>
 </body>
 </html>
